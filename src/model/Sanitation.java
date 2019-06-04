@@ -15,8 +15,8 @@ private String conservation;
 
 
 
-public Sanitation(String name,String nit,String addreess,String phone,int employees,double valueAseets,String constitucionDate,char type,String legalRepresentative,boolean imported ,String importer,String conservation){
-super (name,nit,addreess,phone,employees,valueAseets,constitucionDate,type,legalRepresentative);
+public Sanitation(String name,String nit,String addreess,String phone,int employees,double valueAseets,String constitucionDate,String legalRepresentative,Building[][] tower,char type,boolean imported ,String importer,String conservation){
+super (name,nit,addreess,phone,employees,valueAseets,constitucionDate,legalRepresentative,tower,type);
 
 this.imported=imported;
 this.importer=importer;

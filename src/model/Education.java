@@ -1,6 +1,6 @@
 package model;
 
-public class Education extends ServiceCompany{
+public class Education extends ServiceCompany implements Tax{
 
 
 public static final String HIGHSCHOOL = "Bachillerato";
@@ -16,8 +16,8 @@ private int strataOneandTwo;
 private int qualityTotal;
 
 
-public Education(String name,String nit,String addreess,String phone,int employees,double valueAseets,String constitucionDate,char type,String legalRepresentative,String numRegistry,int acreeditedYears,int positionSaber11,int positionSaberPro,String rectorName,String educationSector,int strataOneandTwo,int qualityTotal){
-super (name,nit,addreess,phone,employees,valueAseets,constitucionDate,type,legalRepresentative);
+public Education(String name,String nit,String addreess,String phone,int employees,double valueAseets,String constitucionDate,String legalRepresentative,Building[][] tower ,char type,String numRegistry,int acreeditedYears,int positionSaber11,int positionSaberPro,String rectorName,String educationSector,int strataOneandTwo,int qualityTotal){
+super (name,nit,addreess,phone,employees,valueAseets,constitucionDate,legalRepresentative,tower,type);
 
 
 this.numRegistry=numRegistry;
@@ -104,6 +104,17 @@ public void setQualityTotal(int qualityTotal){
 }
 
 
+
+public double calculatedProCultured(){
+	double porcenProCulture=0.0;
+
+	porcenProCulture += 20 -(strataOneandTwo/100);
+
+	if (porcenProCulture < 0 ){
+		porcenProCulture = 0.0;
+	}
+	return porcenProCulture;
+}
 
 
 

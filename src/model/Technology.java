@@ -1,6 +1,6 @@
 package model;
 import java.util.ArrayList;
-public class Technology extends Company{
+public class Technology extends ServiceCompany{
 
 
 public static final String CONSULTANCY ="Consultoria";
@@ -17,8 +17,8 @@ private String typeOfService;
 
 private ArrayList<String> services;
 
-public Technology(String name,String nit,String addreess,String phone,int employees,double valueAseets,String constitucionDate,char type,String legalRepresentative,String typeOfService){
-super (name,nit,addreess,phone,employees,valueAseets,constitucionDate,type,legalRepresentative);
+public Technology(String name,String nit,String addreess,String phone,int employees,double valueAseets,String constitucionDate,String legalRepresentative,Building[][] tower,char type,String typeOfService){
+super (name,nit,addreess,phone,employees,valueAseets,constitucionDate,legalRepresentative,tower,type);
 
 this.typeOfService=typeOfService;
 

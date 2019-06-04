@@ -1,6 +1,5 @@
 package model;
-
-
+import java.util.ArrayList;
 public class Invima extends ManufacturingCompany{
 
 
@@ -14,8 +13,8 @@ private String expiration;
 private char modality;
 
 
-public Invima(String name,String nit,String addreess,String phone,int employees,double valueAseets,String constitucionDate,char type,String legalRepresentative,String sanitaryRegistration,String status,String expiration,char modality){
-super (name,nit,addreess,phone,employees,valueAseets,constitucionDate,type,legalRepresentative);
+public Invima(String name,String nit,String addreess,String phone,int employees,double valueAseets,String constitucionDate,String legalRepresentative,Building[][] tower,char type,String sanitaryRegistration,String status,String expiration,char modality){
+super (name,nit,addreess,phone,employees,valueAseets,constitucionDate,legalRepresentative,tower,type);
 
 this.sanitaryRegistration=sanitaryRegistration;
 this.status=status;
