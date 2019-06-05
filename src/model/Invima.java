@@ -1,6 +1,6 @@
 package model;
 import java.util.ArrayList;
-public class Invima extends ManufacturingCompany{
+public class Invima extends ManufacturingCompany implements Consuption{
 
 
 public static final char MANUFACTURE_EXPORT = 'A';
@@ -54,6 +54,26 @@ public void setModality(char modality){
 	this.modality=modality;
 }
 
+
+public double calculatedConsuption(){
+	int tressToSow=0;
+    int liters =0;
+	for (int i =0;i<getProducts().size();i++){
+		liters += getProducts().get(i).getWaterAmount();
+
+		if (liters >= 1  &&  liters <= 140){
+			tressToSow = 6;
+		}
+		else if (liters >= 141 && liters <=800){
+			tressToSow = 25;
+		}
+		else if (liters >800){
+			tressToSow = 200;
+		}
+	}
+	return tressToSow;
+
+}
 
 
 }

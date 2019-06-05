@@ -1,6 +1,6 @@
 package model;
 import java.util.ArrayList;
-public class Technology extends ServiceCompany{
+public class Technology extends ServiceCompany implements Consuption {
 
 
 public static final String CONSULTANCY ="Consultoria";
@@ -11,16 +11,18 @@ public static final String SOFTWARE = "Software";
 public static final String PLATAFORM = "Plataforma";
 
 private String typeOfService;
+private int kiloWatts;
 
 
 
 
 private ArrayList<String> services;
 
-public Technology(String name,String nit,String addreess,String phone,int employees,double valueAseets,String constitucionDate,String legalRepresentative,Building[][] tower,char type,String typeOfService){
+public Technology(String name,String nit,String addreess,String phone,int employees,double valueAseets,String constitucionDate,String legalRepresentative,Building[][] tower,char type,String typeOfService,int kiloWatts){
 super (name,nit,addreess,phone,employees,valueAseets,constitucionDate,legalRepresentative,tower,type);
 
 this.typeOfService=typeOfService;
+this.kiloWatts=kiloWatts;
 
   services =new ArrayList<String>();
   services.add(CONSULTANCY);
@@ -37,4 +39,28 @@ public String getTypeOfService(){
 public void setTypeOfService(String typeOfService){
 	this.typeOfService=typeOfService;
 }
+public int getKiloWatts(){
+	return kiloWatts;
+}
+public void setKiloWatts(int kiloWatts){
+	this.kiloWatts=kiloWatts;
+}
+
+
+public double calculatedConsuption(){
+int tressToSow=0;
+
+if (getKiloWatts() >=1 && getKiloWatts() <= 1000){
+	tressToSow = 8;
+}
+else if (getKiloWatts() >=1001 && getKiloWatts ()<=3000){
+	tressToSow = 35;
+}
+else if (getKiloWatts() > 3000){
+	tressToSow=500;
+}
+return tressToSow;
+}
+
+
 }
