@@ -38,8 +38,8 @@ private int qualityTotal;
 *@param strataOneandTwo active students stratum one and two 
 *@param qualityTotal total number of active students 
 */
-public Education(String name,String nit,String addreess,String phone,int employees,double valueAseets,String constitucionDate,String legalRepresentative,Building[][] tower ,char type,String numRegistry,int acreeditedYears,int positionSaber11,int positionSaberPro,String rectorName,String educationSector,int strataOneandTwo,int qualityTotal){
-super (name,nit,addreess,phone,employees,valueAseets,constitucionDate,legalRepresentative,tower,type);
+public Education(String name,String nit,String addreess,String phone,int employees,double valueAseets,String constitucionDate,String legalRepresentative,int floors,char type,String numRegistry,int acreeditedYears,int positionSaber11,int positionSaberPro,String rectorName,String educationSector,int strataOneandTwo,int qualityTotal){
+super (name,nit,addreess,phone,employees,valueAseets,constitucionDate,legalRepresentative,floors,type);
 
 
 this.numRegistry=numRegistry;
@@ -183,7 +183,21 @@ public double calculatedProCultured(){
 	}
 	return porcenProCulture;
 }
+public String toString(){
+	String msg ="";
 
+	msg+=super.toString()+"\n";
+	msg+="Numero del registro: "+numRegistry+"\n";
+	msg+="Numero de años acreditados de alta calidad ante el MEN: "+acreeditedYears+"\n";
+	msg+="Puesto nacional en la pruebas saber 11: "+positionSaber11+"\n";
+	msg+="Puesto nacional en las pruebas saber pro: "+positionSaberPro+"\n";
+	msg+="Nombre del rector: "+rectorName+"\n";
+	msg+="Sector educativo: "+educationSector+"\n";
+	msg+="Cantidad de estudiantes activos estrato 1 y 2: "+strataOneandTwo+"\n";
+	msg+="Cantidad total de estudiantes: "+qualityTotal+"\n";
+
+	return msg;
+}
 
 
 }

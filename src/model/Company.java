@@ -2,7 +2,7 @@ package model;
 /**
 *This class contains the informations of the Company 
 */
-public class Company extends PersonalityJuridic{
+public abstract class Company extends PersonalityJuridic{
 
 
 public final static char FARM_HUNT_SILVI_FISH ='A';
@@ -32,8 +32,8 @@ private  char type;
 *@param tower   company Building
 *@param type the type of the company 
 */
-public Company(String name,String nit,String addreess,String phone,int employees,double valueAseets,String constitucionDate,String legalRepresentative,Building[][] tower,char type){
-	super (name,nit,addreess,phone,employees,valueAseets,constitucionDate,legalRepresentative,tower);
+public Company(String name,String nit,String addreess,String phone,int employees,double valueAseets,String constitucionDate,String legalRepresentative,int floors,char type){
+	super (name,nit,addreess,phone,employees,valueAseets,constitucionDate,legalRepresentative,floors);
 	this.type=type;
 
 }
@@ -52,7 +52,10 @@ public char getType(){
 public void setType(char type){
 	this.type=type;
 }
+//public String addCompanyEducation(String name,String nit,String addreess,String phone,int employees,double valueAseets,String constitucionDate,String legalRepresentative,Building[][] tower ,char type,String numRegistry,int acreeditedYears,int positionSaber11,int positionSaberPro,String rectorName,String educationSector,int strataOneandTwo,int qualityTotal){
 
+//}
+public abstract String toString();
 
 
 }

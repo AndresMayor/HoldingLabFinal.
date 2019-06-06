@@ -9,14 +9,14 @@ public final static String REFRIGERATION = "Refrigeracion";
 public final static String FREEZING = "CONGELACION";
 
 
-private boolean imported;
+private String imported;
 private String  importer;
 private String conservation;
 
 
 
-public Sanitation(String name,String nit,String addreess,String phone,int employees,double valueAseets,String constitucionDate,String legalRepresentative,Building[][] tower,char type,boolean imported ,String importer,String conservation){
-super (name,nit,addreess,phone,employees,valueAseets,constitucionDate,legalRepresentative,tower,type);
+public Sanitation(String name,String nit,String addreess,String phone,int employees,double valueAseets,String constitucionDate,String legalRepresentative,int floors ,char type,String imported ,String importer,String conservation){
+super (name,nit,addreess,phone,employees,valueAseets,constitucionDate,legalRepresentative,floors,type);
 
 this.imported=imported;
 this.importer=importer;
@@ -25,10 +25,10 @@ this.conservation=conservation;
 }
 
 
-public boolean getImported(){
+public String getImported(){
 	return imported;
 }
-public void setImported(boolean imported){
+public void setImported(String imported){
 	this.imported=imported;
 }
 
@@ -45,6 +45,18 @@ public String getConservation(){
 
 public void setConservation(String conservation){
 	this.conservation=conservation;
+}
+
+
+public String toString(){
+
+	String msg = "";
+
+	msg+=super.toString();
+	msg+="El importador es: "+imported+"\n";
+	msg+="Nombre del fabricador: "+importer+"\n";
+	msg+="Tipo de conservacio: "+conservation+"\n";
+	return msg;
 }
 
 }

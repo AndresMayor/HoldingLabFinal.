@@ -49,4 +49,20 @@ public class Product{
 	public void setNumUnits(int numUnits){
 		this.numUnits=numUnits;
 	}
+
+	public String toString(){
+		String msg ="";
+       
+		msg+="Nombre del Producto: "+name+"\n";
+		msg+="Codigo del Producto: "+code+"\n";
+		msg+="Cantidad de agua gastada: "+waterAmount+"\n";
+		msg+="Cantidad de unidades disponibles: "+numUnits+"\n";
+
+
+		return msg;
+	}
+
+
+
+
 }

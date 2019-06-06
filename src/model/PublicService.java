@@ -11,8 +11,8 @@ public class PublicService extends ServiceCompany implements Tax{
     private int subscribersActual;
     private int subscribersOneandTwo;
 
-    public PublicService(String name,String nit,String addreess,String phone,int employees,double valueAseets,String constitucionDate,String legalRepresentative,Building[][] tower,char type,String typeOfService, int subscribersActual,int subscribersOneandTwo){
-    	super (name,nit,addreess,phone,employees,valueAseets,constitucionDate,legalRepresentative,tower,type);
+    public PublicService(String name,String nit,String addreess,String phone,int employees,double valueAseets,String constitucionDate,String legalRepresentative,int floors,char type,String typeOfService, int subscribersActual,int subscribersOneandTwo){
+    	super (name,nit,addreess,phone,employees,valueAseets,constitucionDate,legalRepresentative,floors,type);
     	this.typeOfService=typeOfService;
     	this.subscribersActual=subscribersActual;
     	this.subscribersOneandTwo=subscribersOneandTwo;
@@ -55,7 +55,17 @@ public class PublicService extends ServiceCompany implements Tax{
     }
 
 
+    public String toString(){
+        String msg = "";
 
+        msg+=super.toString();
+        msg+="Tipo de Servicio: "+typeOfService+"\n";
+        msg+="Suscriptores Actuales: "+subscribersActual+"\n";
+        msg+="Suscriptores de estrato 1 y 2: "+subscribersOneandTwo+"\n";
+
+        return msg;
+        
+    }
 
 
 }

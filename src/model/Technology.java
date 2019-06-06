@@ -18,8 +18,8 @@ private int kiloWatts;
 
 private ArrayList<String> services;
 
-public Technology(String name,String nit,String addreess,String phone,int employees,double valueAseets,String constitucionDate,String legalRepresentative,Building[][] tower,char type,String typeOfService,int kiloWatts){
-super (name,nit,addreess,phone,employees,valueAseets,constitucionDate,legalRepresentative,tower,type);
+public Technology(String name,String nit,String addreess,String phone,int employees,double valueAseets,String constitucionDate,String legalRepresentative,int floors,char type,String typeOfService,int kiloWatts){
+super (name,nit,addreess,phone,employees,valueAseets,constitucionDate,legalRepresentative,floors,type);
 
 this.typeOfService=typeOfService;
 this.kiloWatts=kiloWatts;
@@ -61,6 +61,16 @@ else if (getKiloWatts() > 3000){
 }
 return tressToSow;
 }
+public String toString(){
 
+	String msg ="";
+	
+	msg += super.toString()+"\n";
+	msg +="El tipo de servicio es: "+typeOfService+"\n";
+	msg +="La cantidad de kiloWatts registrada es: "+kiloWatts+"\n";
+	msg +="Cantidad de arboles que deben plantar: "+calculatedConsuption()+"\n";
+
+   return msg;
+}
 
 }

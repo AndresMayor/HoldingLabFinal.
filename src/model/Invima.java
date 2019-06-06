@@ -13,8 +13,8 @@ private String expiration;
 private char modality;
 
 
-public Invima(String name,String nit,String addreess,String phone,int employees,double valueAseets,String constitucionDate,String legalRepresentative,Building[][] tower,char type,String sanitaryRegistration,String status,String expiration,char modality){
-super (name,nit,addreess,phone,employees,valueAseets,constitucionDate,legalRepresentative,tower,type);
+public Invima(String name,String nit,String addreess,String phone,int employees,double valueAseets,String constitucionDate,String legalRepresentative,int floors,char type,String sanitaryRegistration,String status,String expiration,char modality){
+super (name,nit,addreess,phone,employees,valueAseets,constitucionDate,legalRepresentative,floors,type);
 
 this.sanitaryRegistration=sanitaryRegistration;
 this.status=status;
@@ -72,6 +72,21 @@ public double calculatedConsuption(){
 		}
 	}
 	return tressToSow;
+
+}
+
+public String toString(){
+
+String msg = "";
+
+ msg += super.toString();
+ msg +="Numero del registro sanitario: "+sanitaryRegistration+"\n";
+ msg +="El estado es: "+status+"\n";
+ msg +="La Expiracion es: "+expiration+"\n";
+ msg +="La modalidad es: "+modality+"\n";
+
+return msg;
+
 
 }
 

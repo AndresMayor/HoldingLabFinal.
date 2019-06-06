@@ -33,7 +33,7 @@ private Building [][] tower;
 *@param legalRepresentative legal name of the Personality Juridic
 *@param tower   company Building
 */
-public PersonalityJuridic(String name,String nit,String addreess,String phone,int employees,double valueAseets,String constitucionDate,String legalRepresentative,Building[][] tower){
+public PersonalityJuridic(String name,String nit,String addreess,String phone,int employees,double valueAseets,String constitucionDate,String legalRepresentative,int floors ){
 	this.name=name;
 	this.nit=nit;
 	this.addreess=addreess;
@@ -42,7 +42,7 @@ public PersonalityJuridic(String name,String nit,String addreess,String phone,in
 	this.valueAseets=valueAseets;
 	this.constitucionDate=constitucionDate;
 	this.legalRepresentative=legalRepresentative;
-	tower = new Building[7][20];
+	tower = new Building[floors][20];
 }
 /**
 *Gets the name
@@ -172,6 +172,8 @@ public Building[][] getTower(){
 public void setTower(Building[][] tower){
 	this.tower=tower;
 }
+
+
 
 
 }
