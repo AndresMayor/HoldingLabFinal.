@@ -169,8 +169,8 @@ public void setQualityTotal(int qualityTotal){
 }
 
 /**
-*
-*
+*This method calculates the pro culture tax
+*@return tax pro culture
 */
 
 public double calculatedProCultured(){
@@ -183,6 +183,12 @@ public double calculatedProCultured(){
 	}
 	return porcenProCulture;
 }
+
+
+/**
+*This method gives the education company report
+*@return the report of the ducation company
+*/
 public String toString(){
 	String msg ="";
 

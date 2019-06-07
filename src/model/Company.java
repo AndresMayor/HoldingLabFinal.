@@ -52,9 +52,7 @@ public char getType(){
 public void setType(char type){
 	this.type=type;
 }
-//public String addCompanyEducation(String name,String nit,String addreess,String phone,int employees,double valueAseets,String constitucionDate,String legalRepresentative,Building[][] tower ,char type,String numRegistry,int acreeditedYears,int positionSaber11,int positionSaberPro,String rectorName,String educationSector,int strataOneandTwo,int qualityTotal){
 
-//}
 public abstract String toString();
 
 

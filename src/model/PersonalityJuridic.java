@@ -31,7 +31,7 @@ private Building [][] tower;
 *@param valueAseets value in pesos of the Personality Juridic 
 *@param constitucionDate date of incorporation of the Personality Juridic
 *@param legalRepresentative legal name of the Personality Juridic
-*@param tower   company Building
+*@param floors    floors of the company 
 */
 public PersonalityJuridic(String name,String nit,String addreess,String phone,int employees,double valueAseets,String constitucionDate,String legalRepresentative,int floors ){
 	this.name=name;

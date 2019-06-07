@@ -26,10 +26,19 @@ public Holding(String name,String nit,String addreess,String phone,int employees
     company = new ArrayList<Company>();
 }
 
-
+/**
+*This method to be to add a new Company
+*@param campany1 new company 
+*/
 public void addCompany(Company  company1){
         company.add(company1);
 }
+
+/**
+*To return the report of the companys <br>
+*post: the resport is generated<br>
+*@return the report of the companys 
+*/
 public String showCompanys(){
 	String msg="";
 
@@ -40,8 +49,10 @@ public String showCompanys(){
 	return msg;
 }
 
-
-
+/**
+*This method to give the names of the manufacturing companies <br>
+*@return names of manufacturing companies 
+*/
 public String showNameCompanys(){
 
 	String msg = "";
@@ -54,14 +65,15 @@ public String showNameCompanys(){
 }
 	}
 	return msg;
-
-
-
 }
 
-
-
-public ArrayList<Product> verific (String m){
+/**
+*This method is useful to add a product to a company<br>
+*pre: name of the company must be not null<br>
+*post: report of the company products <br>
+*@return cmpany products
+*/
+public ArrayList<Product> verific (String name){
    ArrayList <Product> msg =null;
     for (int i =0;i<company.size() ;i++){
       if (company.get(i) instanceof ManufacturingCompany ){
@@ -73,18 +85,10 @@ public ArrayList<Product> verific (String m){
 return msg;
 }
 
-
-
-
-public String infoProductos(){
-	String msg = "";
-
-	for (int i  = 0 ; i <company.size();i++){
-
-
-	}
-	return msg;
-}
+/**
+*This method to give the names of the service companies <br>
+*@return names if service companies 
+*/
 public String showCompanysNameService(){
 
   String msg="";
@@ -99,6 +103,13 @@ public String showCompanysNameService(){
 return msg ;
 
 }
+
+/**
+*This method is useful to add a Polls to a company<br>
+*pre: name of the company must be not null<br>
+*post: report of the company polls <br>
+*@return cmpany polls
+*/
 public ArrayList<Poll> verificService(String name ){
 	ArrayList<Poll> mgs = null;
 	for (int i =0;i<company.size();i++){
