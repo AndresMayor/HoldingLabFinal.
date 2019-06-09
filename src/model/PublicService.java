@@ -106,6 +106,8 @@ public class PublicService extends ServiceCompany implements Tax{
         msg+="Tipo de Servicio: "+typeOfService+"\n";
         msg+="Suscriptores Actuales: "+subscribersActual+"\n";
         msg+="Suscriptores de estrato 1 y 2: "+subscribersOneandTwo+"\n";
+        msg+= "---------------------------------------------------------";
+
 
         return msg;
 

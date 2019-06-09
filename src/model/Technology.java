@@ -110,6 +110,8 @@ public String toString(){
 	msg +="El tipo de servicio es: "+typeOfService+"\n";
 	msg +="La cantidad de kiloWatts registrada es: "+kiloWatts+"\n";
 	msg +="Cantidad de arboles que deben plantar: "+calculatedConsuption()+"\n";
+	msg += "---------------------------------------------------------";
+
 
    return msg;
 }

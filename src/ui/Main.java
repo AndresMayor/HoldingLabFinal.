@@ -69,13 +69,21 @@ public class Main{
   System.out.println("                                                                          |");
   System.out.println("4.Agregar Encuestas              ");
   System.out.println("                                                                          |");
-  System.out.println("5.               ");
+  System.out.println("5.Agregar Empleado.       ");
   System.out.println("                                                                          |");
-  System.out.println("6.               ");
+  System.out.println("6.Burcar Empleado en el edifico en L              ");
   System.out.println("                                                                          |");
-  System.out.println("7.               ");
+  System.out.println("7.Bucar Empleado en el edificio en Z.              ");
   System.out.println("                                                                          |");
-  System.out.println("8.Exit the program.                                                        ");
+  System.out.println("8.Buscar Empleado en el edificio en X         ");
+  System.out.println("                                                                          |");
+  System.out.println("9.Buscar Empleado en el edificio en E         ");
+  System.out.println("                                                                          |");
+  System.out.println("10.Buscar Empleado en el edificio en O        ");
+  System.out.println("                                                                          |");
+  System.out.println("11.Buscar Empleado en el edificio en Expiral        ");
+  System.out.println("                                                                          |");
+  System.out.println("12.Exit the program.                                                        ");
   System.out.println("---------------------------------------------------------------------------");
 
 
@@ -85,7 +93,7 @@ public class Main{
     */
     public void showMenu(){
     	int userInput=0;
-   while (userInput != 8){
+   while ( userInput != 13){
         showOptions();
         userInput = reader.nextInt();
         reader.nextLine();
@@ -112,7 +120,7 @@ public class Main{
     	String constitucionDate = reader.nextLine();
     	System.out.println("Nombre del representante legal:");
     	String legalRepresentative = reader.nextLine();
-    	System.out.println("Cuantos pisos tiene la empresa:");
+    	System.out.println("Pisos de la empresa max 7 min 3:");
     	int floors = reader.nextInt();
     	reader.nextLine();
     	
@@ -399,12 +407,91 @@ public class Main{
     	}
 
     }
+    else if(userInput == 5){
+        System.out.println("Nombre de la compañia: ");
+        String nameComapy=reader.nextLine();
+        System.out.println("Digite el nombre del empleado");
+        String nameEmployee = reader.nextLine();
+        System.out.println("Digite el cargo del empleado:");
+        String cargEmployee=reader.nextLine();
+        System.out.println("Digite el email del empleado");
+        String emailEmployee= reader.nextLine();
+        user.addEmployeeCompany(nameComapy,nameEmployee,cargEmployee,emailEmployee);
+
+
+    }
+
+
+
+    else if (userInput == 6){
+        System.out.println("Digite el nombre de la compañia: ");
+        String nameComapy = reader.nextLine();
+        System.out.println("Digite el nombre del empleado: ");
+        String nameEmployee = reader.nextLine();
+        System.out.println(user.reportBuildingL(nameComapy,nameEmployee));
+    }
+     else if (userInput == 7){
+        System.out.println("Digite el nombre de la compañia: ");
+        String nameComapy = reader.nextLine();
+        System.out.println("Digite el nombre del empleado: ");
+        String nameEmployee = reader.nextLine();
+        System.out.println(user.reportBuildingZ(nameComapy,nameEmployee));
+    }
+     else if (userInput == 8){
+        System.out.println("Digite el nombre de la compañia: ");
+        String nameComapy = reader.nextLine();
+        System.out.println("Digite el nombre del empleado: ");
+        String nameEmployee = reader.nextLine();
+        System.out.println(user.reportBuildingX(nameComapy,nameEmployee));
+    }
+    else if (userInput == 9){
+        System.out.println("Digite el nombre de la compañia: ");
+        String nameComapy = reader.nextLine();
+        System.out.println("Digite el nombre del empleado: ");
+        String nameEmployee = reader.nextLine();
+        System.out.println(user.reportBuildingE(nameComapy,nameEmployee));
+    }
+    else if (userInput == 10){
+        System.out.println("Digite el nombre de la compañia: ");
+        String nameComapy = reader.nextLine();
+        System.out.println("Digite el nombre del empleado: ");
+        String nameEmployee = reader.nextLine();
+        System.out.println(user.reportBuildingO(nameComapy,nameEmployee));
+    }
+
+     else if (userInput == 11){
+        System.out.println("Digite el nombre de la compañia: ");
+        String nameComapy = reader.nextLine();
+        System.out.println("Digite el nombre del empleado: ");
+        String nameEmployee = reader.nextLine();
+        System.out.println(user.reportBuildingEspiral(nameComapy,nameEmployee));
+    }
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     	}  	
     }
 
 
     public void init(){
+
+
+
+
 
 
     }

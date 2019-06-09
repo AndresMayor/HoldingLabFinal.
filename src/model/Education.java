@@ -201,6 +201,8 @@ public String toString(){
 	msg+="Sector educativo: "+educationSector+"\n";
 	msg+="Cantidad de estudiantes activos estrato 1 y 2: "+strataOneandTwo+"\n";
 	msg+="Cantidad total de estudiantes: "+qualityTotal+"\n";
+    msg+= "---------------------------------------------------------";
+
 
 	return msg;
 }

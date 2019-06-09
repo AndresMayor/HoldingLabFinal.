@@ -138,6 +138,7 @@ String msg = "";
  msg +="El estado es: "+status+"\n";
  msg +="La Expiracion es: "+expiration+"\n";
  msg +="La modalidad es: "+modality+"\n";
+ msg += "---------------------------------------------------------";
 
 return msg;
 

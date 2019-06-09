@@ -99,6 +99,8 @@ public class Product{
 		msg+="Codigo del Producto: "+code+"\n";
 		msg+="Cantidad de agua gastada: "+waterAmount+"\n";
 		msg+="Cantidad de unidades disponibles: "+numUnits+"\n";
+		msg += "---------------------------------------------------------";
+
 
 
 		return msg;

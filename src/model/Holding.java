@@ -77,7 +77,7 @@ public ArrayList<Product> verific (String name){
    ArrayList <Product> msg =null;
     for (int i =0;i<company.size() ;i++){
       if (company.get(i) instanceof ManufacturingCompany ){
-      	if( company.get(i).getName().equals(m)){      	
+      	if( company.get(i).getName().equals(name)){      	
       	  msg = ((ManufacturingCompany)company.get(i)).getProducts();
     }
 }
@@ -122,7 +122,112 @@ public ArrayList<Poll> verificService(String name ){
 }
 	return mgs ;
 }
+/**
+*
+*
+*
+*/
+public void addEmployeeCompany(String nameCompany,String nameEmployee,String cargoEmploye,String email){
 
+	for (int i = 0;i<company.size();i++){
+		if(company.get(i).getName().equals(nameCompany)){
+			if(company.get(i).getTower()!=null){
+				company.get(i).addEmployee(nameEmployee,cargoEmploye,email);
+			}
+		}
+	}
+}
+
+/**
+*
+*
+*
+*/
+public String reportBuildingL(String nameCompany,String nameEmployee){
+	String msg="";
+
+	for (int i =0;i<company.size();i++){
+		if (company.get(i).getName().equals(nameCompany)){
+			msg+=company.get(i).recorrierL(nameEmployee);
+		}
+	}
+	return msg;
+}
+/**
+*
+*
+*
+*/
+
+public String reportBuildingZ(String nameCompany,String nameEmployee){
+	String msg="";
+	for (int i = 0;i<company.size();i++){
+		if (company.get(i).getName().equals(nameCompany)){
+			msg+=company.get(i).recorrierZ(nameEmployee);
+		}
+	}
+	return msg;
+}
+/**
+*
+*
+*/
+public String reportBuildingX(String nameCompany,String nameEmployee){
+	String msg="";
+
+	for (int i =0;i<company.size();i++){
+		if (company.get(i).getName().equals(nameCompany)){
+			msg+= company.get(i).espiralX(nameEmployee);
+		}
+	}
+	return msg;
+}
+/**
+*
+*
+*/
+public String reportBuildingE(String nameCompany,String nameEmployee){
+  String msg="";
+
+  for (int i = 0;i<company.size();i++){
+  	if (company.get(i).getName().equals(nameCompany)){
+  		msg+= company.get(i).espiralE(nameEmployee);
+  	}
+  }
+  return msg;
+
+}
+/**
+*
+*
+*/
+public String reportBuildingO(String nameCompany,String nameEmployee){
+  String msg="";
+
+  for (int i = 0;i<company.size();i++){
+  	if (company.get(i).getName().equals(nameCompany)){
+  		msg+= company.get(i).espiralO(nameEmployee);
+  	}
+  }
+  return msg;
+
+}
+/**
+*
+*
+*/
+
+public String reportBuildingEspiral(String nameCompany,String nameEmployee){
+  String msg="";
+
+  for (int i = 0;i<company.size();i++){
+  	if (company.get(i).getName().equals(nameCompany)){
+  		msg+= company.get(i).espiral(nameEmployee);
+  	}
+  }
+  return msg;
+
+}
 
 
 

@@ -95,6 +95,8 @@ public String toString(){
 	msg+="El importador es: "+imported+"\n";
 	msg+="Nombre del fabricador: "+importer+"\n";
 	msg+="Tipo de conservacio: "+conservation+"\n";
+	msg+= "---------------------------------------------------------";
+
 	return msg;
 }
 

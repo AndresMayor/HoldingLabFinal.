@@ -50,7 +50,7 @@ return polls;
 public String toString(){
 
 	String msg = "";
-
+    msg += "---------------------------------------------------------";
 	msg += "El nombre de la empresa es: "+getName()+"\n";
 	msg += "Nit de la empresa: "+getNit()+"\n";
 	msg += "Direccion de la empresa: "+getAddreess()+"\n";
@@ -59,7 +59,7 @@ public String toString(){
 	msg += "Valor en pesos de los activos: "+getValueAseets()+"\n";
 	msg += "Fecha de Cosntitucion: "+getConstitucionDate()+"\n";
 	msg += "Representante legal: "+getLegalRepresentative()+"\n";
-	msg += "Dimension del edificio: "+getTower()+"\n";
+	msg += "Pisos del edificio: "+getFloors()+"\n";
 	msg += "Tipo de organizacion: "+getType()+"\n";
 
 	return msg;

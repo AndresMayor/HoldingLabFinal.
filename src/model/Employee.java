@@ -7,7 +7,7 @@ public class Employee{
 	private String name;
 	private String businessPosition;
 	private String email;
-	
+	private boolean disponibility;
 /**
 *Employee Constructor 
 *@param name name of the employee
@@ -15,7 +15,7 @@ public class Employee{
 *@param email email of the employee
 */
 
-	public Employee(String name, String businessPosition,String email){
+	public Employee(String name, String businessPosition,String email,boolean disponibility){
 		this.name=name;
 		this.businessPosition=businessPosition;
 		this.email=email;
@@ -25,7 +25,7 @@ public class Employee{
 	*Gets of the name employee
 	*@return name of the employee
 	*/
-	public String getName(){
+	public String getNameEmployee(){
 		return name;
 	}
 	/**
@@ -63,6 +63,21 @@ public class Employee{
 	public void setEmail(String email){
 		this.email=email;
 	}
+	/**
+	*Gets of the disponibility Employee
+	*@return the disponibility Employee
+	*/
+	public boolean getDisponibility(){
+		return disponibility;
+	}
+	/**
+	*Sets of the disponibility
+	*@param disponibility the disponibility of the employee
+	*/
+
+    public void setDisponibility(boolean disponibility){
+	this.disponibility=disponibility;
+}
 
 
 	
