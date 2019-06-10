@@ -184,7 +184,7 @@ public int getFloors(){
 *Sets the floors
 *@param floors the floors of the building
 */
-public void serFloors(int floors){
+public void seTFloors(int floors){
 	this.floors=floors;
 }
 
