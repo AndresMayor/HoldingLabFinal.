@@ -190,8 +190,9 @@ public void serFloors(int floors){
 
 
 /**
-*
-*
+*This method makes L shaped travel of the matrix
+*@param name name of the employee
+*@return name of the employee
 */
 public String recorrierL(String name){
 	String msj = "";
@@ -219,8 +220,9 @@ return msj;
 
 
 /**
-*
-*
+*This method makes Z shaped travel of the matrix
+*@param name name of the employee
+*@return name of the employee
 */
 public String recorrierZ(String name){
 	String msj= "";
@@ -246,8 +248,9 @@ public String recorrierZ(String name){
    return msj;
 }
 /**
-*
-*
+*This method makes X shaped travel of the matrix
+*@param name name of the employee
+*@return name of the employee
 */
 public String espiralX(String name){
 
@@ -272,10 +275,10 @@ String msg="";
 return msg;
 }
 /**
-*
-*
+*This method makes E shaped travel of the matrix
+*@param name name of the employee
+*@return name of the employee
 */
-
 public String espiralE(String name){
 	String msj = "";
 	int k = 0;
@@ -307,11 +310,10 @@ for (int j = 0; j < tower.length;j+= 2){
 return msj;
 }
 /**
-*
-*
+*This method makes O shaped travel of the matrix
+*@param name name of the employee
+*@return name of the employee
 */
-
-
 public String espiralO(String name){
 String msj="";
 
@@ -338,9 +340,9 @@ String msj="";
 }
 
 /**
-*
-*
-*
+*This method makes espiral shaped travel of the matrix
+*@param name name of the employee
+*@return name of the employee
 */
 public String espiral(String cargo){
 	String msj="";
@@ -380,7 +382,12 @@ contadorFila1++;
 	}
 	return msj;
 }
-
+/**
+*this method assigns an employee to cubicle
+*@param nameEmployee name of the employee
+*@param positionEmployee position of the employee
+*@param emailEmployee email of the employee
+*/
 
 public void addEmployee(String nameEmployee,String positionEmployee,String emailEmployee){
 boolean t = false;

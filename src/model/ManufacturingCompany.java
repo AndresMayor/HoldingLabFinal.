@@ -52,6 +52,14 @@ for(int i = 0; i < products.size();i++){
   }
 return msj;
 }
+/** Description: este metodo agrega los productos
+*@param pro ArrayList los productos
+*/
+public void addProduct(ArrayList<Product> pro){
+
+products = pro;
+
+}
 
 /**
 *This method gives the company

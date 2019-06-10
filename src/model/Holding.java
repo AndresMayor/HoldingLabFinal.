@@ -48,7 +48,6 @@ public String showCompanys(){
 	}
 	return msg;
 }
-
 /**
 *This method to give the names of the manufacturing companies <br>
 *@return names of manufacturing companies 
@@ -123,9 +122,11 @@ public ArrayList<Poll> verificService(String name ){
 	return mgs ;
 }
 /**
-*
-*
-*
+*This method adds an employee still cubicle 
+*@param nameCompany name of the company 
+*@param nameEmployee name of the employee
+*@param cargoEmploye position of the bussiness
+*@param email  email of the employee
 */
 public void addEmployeeCompany(String nameCompany,String nameEmployee,String cargoEmploye,String email){
 
@@ -139,9 +140,10 @@ public void addEmployeeCompany(String nameCompany,String nameEmployee,String car
 }
 
 /**
-*
-*
-*
+*This method makes the L path of thhe matriz 
+*@param nameCompany name of the company
+*@param nameEmployee name of the employee
+*@return building information
 */
 public String reportBuildingL(String nameCompany,String nameEmployee){
 	String msg="";
@@ -154,9 +156,10 @@ public String reportBuildingL(String nameCompany,String nameEmployee){
 	return msg;
 }
 /**
-*
-*
-*
+*This method makes the Z paht of the matriz 
+*@param nameCompany name of the company 
+*@param nameEmployee name of the employee
+*@return building information 
 */
 
 public String reportBuildingZ(String nameCompany,String nameEmployee){
@@ -169,8 +172,10 @@ public String reportBuildingZ(String nameCompany,String nameEmployee){
 	return msg;
 }
 /**
-*
-*
+*This method makes the X paht of the matriz 
+*@param nameCompany name of the company 
+*@param nameEmployee name of the employee
+*@return building information 
 */
 public String reportBuildingX(String nameCompany,String nameEmployee){
 	String msg="";
@@ -183,8 +188,10 @@ public String reportBuildingX(String nameCompany,String nameEmployee){
 	return msg;
 }
 /**
-*
-*
+*This method makes the E paht of the matriz 
+*@param nameCompany name of the company 
+*@param nameEmployee name of the employee
+*@return building information 
 */
 public String reportBuildingE(String nameCompany,String nameEmployee){
   String msg="";
@@ -198,8 +205,10 @@ public String reportBuildingE(String nameCompany,String nameEmployee){
 
 }
 /**
-*
-*
+*This method makes the O paht of the matriz 
+*@param nameCompany name of the company 
+*@param nameEmployee name of the employee
+*@return building information 
 */
 public String reportBuildingO(String nameCompany,String nameEmployee){
   String msg="";
@@ -213,10 +222,11 @@ public String reportBuildingO(String nameCompany,String nameEmployee){
 
 }
 /**
-*
-*
+*This method makes the Espiral paht of the matriz 
+*@param nameCompany name of the company 
+*@param nameEmployee name of the employee
+*@return building information 
 */
-
 public String reportBuildingEspiral(String nameCompany,String nameEmployee){
   String msg="";
 
@@ -228,7 +238,18 @@ public String reportBuildingEspiral(String nameCompany,String nameEmployee){
   return msg;
 
 }
+/**
+*This method adds the products with the company 
+*@param k name of the company
+*@param l name of the product 
+*/
+public void addCompanyProducts(Company k,ArrayList<Product> l){
 
+  company.add(k);
+  ((ManufacturingCompany) k).addProduct(l);
+
+
+}
 
 
 }
